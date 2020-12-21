@@ -5,27 +5,27 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         0000032a  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         0000000a  00800060  0000032a  0000039e  2**0
+  1 .data         0000000e  00800060  0000032a  0000039e  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .comment      00000030  00000000  00000000  000003a8  2**0
+  2 .comment      00000030  00000000  00000000  000003ac  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000003d8  2**2
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000003dc  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000098  00000000  00000000  00000414  2**0
+  4 .debug_aranges 00000098  00000000  00000000  00000418  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000ef9  00000000  00000000  000004ac  2**0
+  5 .debug_info   00000ef9  00000000  00000000  000004b0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000079c  00000000  00000000  000013a5  2**0
+  6 .debug_abbrev 0000079c  00000000  00000000  000013a9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000006c6  00000000  00000000  00001b41  2**0
+  7 .debug_line   000006c6  00000000  00000000  00001b45  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000158  00000000  00000000  00002208  2**2
+  8 .debug_frame  00000158  00000000  00000000  0000220c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000403  00000000  00000000  00002360  2**0
+  9 .debug_str    00000403  00000000  00000000  00002364  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000756  00000000  00000000  00002763  2**0
+ 10 .debug_loc    00000756  00000000  00000000  00002767  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000078  00000000  00000000  00002eb9  2**0
+ 11 .debug_ranges 00000078  00000000  00000000  00002ebd  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -70,7 +70,7 @@ Disassembly of section .text:
   6a:	02 c0       	rjmp	.+4      	; 0x70 <__do_copy_data+0x10>
   6c:	05 90       	lpm	r0, Z+
   6e:	0d 92       	st	X+, r0
-  70:	aa 36       	cpi	r26, 0x6A	; 106
+  70:	ae 36       	cpi	r26, 0x6E	; 110
   72:	b1 07       	cpc	r27, r17
   74:	d9 f7       	brne	.-10     	; 0x6c <__do_copy_data+0xc>
   76:	0e 94 30 01 	call	0x260	; 0x260 <main>
@@ -416,7 +416,7 @@ int main(void)
  274:	60 e0       	ldi	r22, 0x00	; 0
  276:	80 e0       	ldi	r24, 0x00	; 0
  278:	0e 94 73 00 	call	0xe6	; 0xe6 <LCD_GoToXY>
-	LCD_DisplayString ("Mohammad");
+	LCD_DisplayString ("Hello Wolrd!");
  27c:	80 e6       	ldi	r24, 0x60	; 96
  27e:	90 e0       	ldi	r25, 0x00	; 0
  280:	0e 94 95 00 	call	0x12a	; 0x12a <LCD_DisplayString>
