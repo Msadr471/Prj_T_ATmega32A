@@ -13,7 +13,7 @@ int main(void)
 	PORTD |= (1 << PORTD2) | (1 << PORTD3);
 	LCD_Clear();
 	LCD_GoToXY (0,0);
-	LCD_DisplayString ("Hello Wolrd!");
+	LCD_DisplayString ("Hello World!");
 	_delay_ms(500);
 	LCD_GoToXY (0,0);
 	LCD_Clear();

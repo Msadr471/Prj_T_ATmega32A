@@ -416,7 +416,7 @@ int main(void)
  274:	60 e0       	ldi	r22, 0x00	; 0
  276:	80 e0       	ldi	r24, 0x00	; 0
  278:	0e 94 73 00 	call	0xe6	; 0xe6 <LCD_GoToXY>
-	LCD_DisplayString ("Hello Wolrd!");
+	LCD_DisplayString ("Hello World!");
  27c:	80 e6       	ldi	r24, 0x60	; 96
  27e:	90 e0       	ldi	r25, 0x00	; 0
  280:	0e 94 95 00 	call	0x12a	; 0x12a <LCD_DisplayString>
